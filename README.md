@@ -1,30 +1,70 @@
-# napqueens_dashboard_task
-A dashboard task given by napqueen
+# Getting Started with Create React App
 
-initially i started downloading and installing node js and install react in my pc
-after installing react, i opened terminal or command prompt and created a new directory for my project.
-After doing the process navigate to the project directory and initialize a new React project using the following command: "npx create-react-app dashboard"
-Then we have to change current directory to the project directory: "cd dashboard"
-Then i opened my project in Visual Studio and started working on it.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-For installing the dependencies:
-Installing Antd-UI, a popular Design library for React,executed by: "npm install antd"
-After that i installed node-sass, a library that allows to use SCSS in React components:"npm install node-sass"
+## Available Scripts
 
-For creating dashboard compenents:
-Initially I surfed everything in the material UI and viewed all components and their dependencies and working process and style and framework of it.
-In src folder I created a new folder named components
-Inside the components folder, create the necessary React components for dashboard, such as Sidebar, Header, MainContent, etc. 
+In the project directory, you can run:
 
-Implementing Material-UI and SCSS styling:
-Import the necessary Antd-UI components and styles into React components:"import { Button } from 'antd';"
-Use SCSS to style components. Create SCSS files for each component or create a single SCSS file to hold all styles.
-Import the SCSS files into your React components using the import statement, like this: "import './ComponentName.scss';"
-Apply the CSS classes from SCSS files to the appropriate elements in your React components.
+### `npm start`
 
-Building dashboard:
-Combining components and layouts in the App.js file and 
-execute this command in termincal:"npm start"
-Open web browser and navigate to http://localhost:3000 to see dashboard.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
