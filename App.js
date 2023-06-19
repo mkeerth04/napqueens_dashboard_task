@@ -307,7 +307,7 @@ const App = () => {
     >
       <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
         <div className="demo-logo-vertical" />
-        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={value} />
+        <Menu theme="dark" defaultSelectedKeys={['4']} mode="inline" items={value} />
       </Sider>
 
       <Layout>
