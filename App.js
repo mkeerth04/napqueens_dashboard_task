@@ -1,4 +1,4 @@
-import { FileOutlined,SmileOutlined, UserOutlined } from '@ant-design/icons';
+import { FileOutlined,SmileOutlined, UserOutlined,DownloadOutlined,FilterOutlined,MenuOutlined } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import { useState } from 'react';
 import { Space, Table, Tag } from 'antd';
@@ -9,6 +9,10 @@ import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { Checkbox } from 'antd';
 import { Switch } from 'antd';
+import { Divider } from 'antd';
+import { Image } from 'antd';
+import { Radio } from 'antd';
+
 
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -74,17 +78,18 @@ function getItem(label, key, icon, children) {
   };
 }
 const value = [
-  getItem('Dashboard','1', <FileOutlined />),
-  getItem('Catalog','2', <FileOutlined />),
-  getItem('Inventory','3', <FileOutlined />),
-  getItem('Advertising','4', <FileOutlined />),
-  getItem('Product Intelligence','5', <FileOutlined />),
-  getItem('Fore casting','6', <FileOutlined />),
-  getItem('Report Central','7', <FileOutlined/>),
-  getItem('Report','8', <FileOutlined />),
-  getItem('Link Accounts','9', <FileOutlined />),
-  getItem('Settings','10', <FileOutlined />),
-  getItem('Help','11', <FileOutlined />),
+  getItem('','1', <MenuOutlined />),
+  getItem('Dashboard','2', <FileOutlined />),
+  getItem('Catalog','3', <FileOutlined />),
+  getItem('Inventory','4', <FileOutlined />),
+  getItem('Advertising','5', <FileOutlined />),
+  getItem('Product Intelligence','6', <FileOutlined />),
+  getItem('Fore casting','7', <FileOutlined />),
+  getItem('Report Central','8', <FileOutlined/>),
+  getItem('Report','9', <FileOutlined />),
+  getItem('Link Accounts','10', <FileOutlined />),
+  getItem('Settings','11', <FileOutlined />),
+  getItem('Help','12', <FileOutlined />),
 ];
 const App = () => {
   
@@ -226,7 +231,7 @@ const App = () => {
       impression: '4.5k',
       ctr: '4.5k',
       convrate: '1.5%',
-      report: 'report',
+      report: <p style={{color:"blue"}}>Report</p>,
       dot:'...'
     },
     {
@@ -247,7 +252,7 @@ const App = () => {
       impression: '12k',
       ctr: '12k',
       convrate: '4.5%',
-      report: 'report',
+      report: <p style={{color:"blue"}}>Report</p>,
       dot:'...'
     },
     {
@@ -268,7 +273,7 @@ const App = () => {
       impression: '4.6k',
       ctr: '4.6k',
       convrate: '5.5%',
-      report: 'report',
+      report: <p style={{color:"blue"}}>Report</p>,
       dot:'...'
     },
     {
@@ -289,7 +294,7 @@ const App = () => {
       impression: '3.6k',
       ctr: '3.6k',
       convrate: '9.5%',
-      report: 'report',
+      report: <p style={{color:"blue"}}>Report</p>,
       dot:'...'
     },
   ];
@@ -298,6 +303,9 @@ const App = () => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
+  const [size, setSize] = useState('large'); // default is 'middle'
+  
   return (
     
     <Layout
@@ -305,13 +313,15 @@ const App = () => {
         minHeight: '100vh',
       }}
     >
-      <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+      <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)} style={{ backgroundColor: "white" }} >
         <div className="demo-logo-vertical" />
-        <Menu theme="dark" defaultSelectedKeys={['4']} mode="inline" items={value} />
+        <Menu theme="light" defaultSelectedKeys={['5']} mode="vertical" items={value} />
       </Sider>
 
       <Layout>
-        <div style={{background: colorBgContainer,backgroundColor:"white", height:20, display: 'flex', flexDirection:"row",justifyContent:'end' }}><UserOutlined /></div>,
+        <div style={{ background: colorBgContainer, backgroundColor: "white", display: 'flex', flexDirection: "row", justifyContent: 'end' }}>
+         <Button type="link" size={size}><b><UserOutlined/></b></Button>
+        </div>,
         <Header
           style={{
             padding: "flex",
@@ -387,8 +397,8 @@ const App = () => {
               margin: '16px 0',
             }}
           >
-            <Breadcrumb.Item>User</Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+            {/* <Breadcrumb.Item>User</Breadcrumb.Item>
+            <Breadcrumb.Item>Bill</Breadcrumb.Item> */}
           </Breadcrumb>
           
           <div
@@ -399,9 +409,43 @@ const App = () => {
               minHeight: 360,
               background: colorBgContainer,
             }}
-          ><b style={{fontSize:20}}>All Campaign</b>
+           
+          >
+            <div style={{display: "flex",
+              flexDirection: "row",
+              justifyContent:"space-around"}}>
+            <Image
+                width={200}
+                // src="/images/graph.png"
+            src="https://1drv.ms/i/s!AiL1eAEMm99LgTCWecflhRpkDtwk?e=tCrWZb"
+            />
+            <Image
+            width={200}
+            src="https://1drv.ms/i/s!AiL1eAEMm99LgTNgfycFAWQvM0yA?e=LkvULh"
+            />
+            <Image
+            width={200}
+            src="https://1drv.ms/i/s!AiL1eAEMm99LgTRB-km6qDTZEh-4?e=XLh4aq"
+            />
+            </div>
+           <Breadcrumb
+            style={{
+              margin: '16px 0',
+            }}
+          >
+          </Breadcrumb>
+            <b style={{ fontSize: 20 }}>All Campaign</b>
+            <div style={{display:"flex",flexDirection:"row", justifyContent:"end"}}>
+            <Space direction="vertical">
+                <Space wrap>
+                  <Button icon={<FilterOutlined />} size={size}>Filter</Button>
+                  <Button size={size}>Column</Button>
+                  <Button icon={<DownloadOutlined />} size={size} />
+                </Space>
+              </Space>
+              </div>
+      
           <Table columns={columns} dataSource={data} />
-          {/* <Table columns={columns} dataSource={data} /> */}
           </div>
         </Content>
 
@@ -410,8 +454,9 @@ const App = () => {
             textAlign: 'center',
           }}
         >
-          Ant Design ©2023 Created by Ant UED
+          Designed by M.Keerthana (19MIS0412)
         </Footer>
+
       </Layout>
     </Layout>
   );
