@@ -68,3 +68,46 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Step 1: Set up the project
+
+Initially I installed Node.js on my computer.
+After installing it open terminal or command prompt and create a new directory for project.
+Navigate to the project directory and initialize a new React project using the following command:
+"npx create-react-app dashboard"
+I Changed current my directory to the project directory by using this command:"cd dashboard"
+Then open project in visual studio
+
+Step 2: Install dependencies
+
+I installed Ant Design and its required dependencies by running the following command in your terminal:
+"npm install antd"
+After that I installed node-sass, a library that allows you to use SCSS in React components:
+"npm install node-sass"
+
+Step 3: Create the dashboard components
+
+In the src folder, create a new folder called components.
+Inside the components folder, I create the necessary React components for dashboard, such as Sidebar, Header, MainContent, etc.
+
+Step 4: Implement Ant Design and SCSS styling
+
+I imported the necessary Ant Design components and styles into React components.
+I used SCSS to style components. Create SCSS files for each component or create a single SCSS file to hold all your styles.
+I imported the SCSS files into React components using the import statement, like this:"import './ComponentName.scss';"
+Then I apply the CSS classes from my SCSS files to the appropriate elements in your React components.
+
+Step 5: Build the dashboard layout and run and test it
+
+Then i started the development server by running the following command in my terminal:"npm start"
+It will navigate to http://localhost:3000 to see it.
+
+link for my code in github: https://github.com/mkeerth04/napqueens_dashboard_task.git
+I wouldn’t able to deploy this react app , I apology for that
+Anyhow this is the outcome of my work
+Please do consider this
+
+Even I have tired doing it in material.io framework that code is in Dashboard.js, but I couldn.t able to further continue with it so I tried a new framework (antd) and worked on in it 
+My code is in the App.js file using antd framework
+ 
+
